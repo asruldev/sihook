@@ -1,0 +1,39 @@
+{
+  "name": "sihook",
+  "version": "1.0.0",
+  "description": "Hooks seperti makan cookies 🍪",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/sihook"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "typescript",
+    "useToggle"
+  ],
+  "author": "Asrul Harahap",
+  "license": "MIT",
+  "scripts": {
+    "test": "vitest",
+    "build": "tsup src/index.ts --format esm,cjs --dts"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.2.0",
+    "@types/jest": "^29.5.14",
+    "@types/react": "^19.0.10",
+    "jsdom": "^26.0.0",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.6"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  }
+}

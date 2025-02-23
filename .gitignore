@@ -1,0 +1,16 @@
+# Node modules
+node_modules
+dist
+playground/node_modules
+playground/dist
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+# Editor
+.vscode
+.idea
+.DS_Store
+
+# Logs
+*.log
