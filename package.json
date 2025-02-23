@@ -1,7 +1,7 @@
 {
   "name": "sihook",
   "version": "1.0.1",
-  "description": "Hooks seperti makan cookies 🍪",
+  "description": "Hooks like eating cookies 🍪✨",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,7 +10,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/username/sihook"
+    "url": "https://github.com/asruldev/sihook"
   },
   "keywords": [
     "react",
