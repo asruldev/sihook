@@ -1,65 +1,104 @@
-# sihook 🍪
 
-**sihook** adalah kumpulan custom hooks untuk React yang ringan dan mudah digunakan. Dibuat untuk meningkatkan produktivitas dalam pengembangan aplikasi React dengan pendekatan yang simpel dan efisien.
+# 🪄 sihook 🍪
 
-## ✨ Fitur
-- 📌 Hooks siap pakai untuk state management, efek, dan event handling.
-- 🚀 Performant & ringan.
-- ⚛️ Sepenuhnya kompatibel dengan React dan TypeScript.
+**"Hooks like eating cookies" 🍪✨**
 
-## 📦 Instalasi
+`sihook` is a collection of hooks designed to simplify React app development with TypeScript. This package provides a set of useful and ready-to-use hooks to handle common needs in your React applications, making your coding life sweeter! 😄
 
-Gunakan npm, yarn, atau pnpm untuk menginstal **sihook**:
+## 🚀 Installation
 
-```sh
+To install `sihook`, you can use either NPM or Yarn.
+
+### Using NPM
+
+```bash
 npm install sihook
 ```
-```sh
+
+### Using Yarn
+
+```bash
 yarn add sihook
 ```
-```sh
-pnpm add sihook
-```
 
-## 🚀 Penggunaan
+## 💡 Features
 
-### 1. useCounter
-Hook sederhana untuk menangani counter.
+- **useLocalStorage**: A hook to easily store and retrieve data from `localStorage`. 🗄️
+- **useWindowSize**: A hook to monitor the window size in real-time. 🖥️
+- **useDebounce**: A hook to apply debouncing to functions for performance optimization. ⏱️
+
+## 🛠️ Usage Examples
+
+### `useLocalStorage`
+
+Store and retrieve values with ease using `localStorage`! 🔐
 
 ```tsx
-import { useCounter } from "sihook";
+import { useLocalStorage } from 'sihook';
 
-export default function CounterComponent() {
-  const { count, increment, decrement } = useCounter();
+const MyComponent = () => {
+  const [value, setValue] = useLocalStorage('myKey', 'defaultValue');
 
   return (
     <div>
-      <h1>Count: {count}</h1>
-      <button onClick={increment}>+</button>
-      <button onClick={decrement}>-</button>
+      <p>{value}</p>
+      <button onClick={() => setValue('newValue')}>Set Value</button>
     </div>
   );
-}
+};
 ```
 
-### 2. useToggle
-Hook untuk toggle nilai boolean.
+### `useWindowSize`
+
+Keep track of your window size in real-time, and create responsive layouts! 📏
 
 ```tsx
-import { useToggle } from "sihook";
+import { useWindowSize } from 'sihook';
 
-export default function ToggleComponent() {
-  const [isOpen, toggle] = useToggle(false);
+const MyComponent = () => {
+  const { width, height } = useWindowSize();
 
   return (
     <div>
-      <button onClick={toggle}>{isOpen ? "Tutup" : "Buka"}</button>
+      <p>Width: {width}</p>
+      <p>Height: {height}</p>
     </div>
   );
-}
+};
 ```
 
-## 📜 Lisensi
+### `useDebounce`
 
-MIT License © 2025 [Asrul Harahap](https://github.com/asruldev)
+Prevent excessive API calls or re-renders by debouncing your functions! 🐢
 
+```tsx
+import { useDebounce } from 'sihook';
+
+const MyComponent = () => {
+  const [search, setSearch] = useState('');
+  const debouncedSearch = useDebounce(search, 500);
+
+  return (
+    <div>
+      <input
+        type="text"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+      <p>Debounced Search: {debouncedSearch}</p>
+    </div>
+  );
+};
+```
+
+## 📚 Documentation
+
+Each hook in `sihook` comes with clear documentation and usage examples. For more detailed information, check out the repository documentation.
+
+## 🤝 Contributing
+
+We 💖 contributions from the community! If you'd like to contribute, feel free to open an issue or submit a pull request.
+
+## 📝 License
+
+MIT License. See the [LICENSE](LICENSE) file for more details.

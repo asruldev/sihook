@@ -1,6 +1,6 @@
 {
   "name": "sihook",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Hooks seperti makan cookies 🍪",
   "main": "dist/index.js",
   "module": "dist/index.js",
